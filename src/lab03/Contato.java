@@ -7,6 +7,7 @@ public class Contato {
 	private String telefone;
 	public Contato(String nome, String sobrenome, String telefone) {
 		this.nome = nome;
+		this.sobrenome = sobrenome;
 		this.telefone = telefone;
 	}
 	public String nomeCompleto() {

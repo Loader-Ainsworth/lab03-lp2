@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class Menu {
 
-	Scanner sc = new Scanner(System.in);
-	Agenda agendaPadrao = new Agenda();
-	private void cadastraContato() {
+	private Scanner sc = new Scanner(System.in);
+	private Agenda agendaPadrao = new Agenda();
+	public void cadastrarContato() {
 		int posicao;
 		String nome;
 		String sobrenome;
 		String telefone;
 		System.out.printf("\nPosição: ");
 		posicao = sc.nextInt();
+		sc.nextLine();
 		System.out.printf("\nNome: ");
 		nome = sc.nextLine(); 
 		System.out.printf("\nSobrenome: ");
@@ -24,5 +25,15 @@ public class Menu {
 		} else {
 			System.out.println("POSIÇÃO INVÁLIDA");
 		}
+	}
+	public void listarContatos() {
+		System.out.printf(agendaPadrao.listarContatos()); 
+	}
+	public void exibirContato() {
+		int posicaoContato;
+		System.out.printf("\nContato> ");
+		posicaoContato = sc.nextInt();
+		sc.nextLine();
+		System.out.printf(agendaPadrao.pesquisaContato(posicaoContato));
 	}
 }

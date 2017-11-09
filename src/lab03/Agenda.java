@@ -22,7 +22,7 @@ public class Agenda {
 		if(!posicaoEhValida(posicao) || listaDeContatos[posicao-1] == null) {
 			return "POSIÇÃO INVÁLIDA!";
 		}
-		return String.format("%s - %s", this.listaDeContatos[posicao-1].nomeCompleto(), this.listaDeContatos[posicao-1].getTelefone());
+		return String.format("%s - %s\n", this.listaDeContatos[posicao-1].nomeCompleto(), this.listaDeContatos[posicao-1].getTelefone());
 	}
 	public String listarContatos() {
 		String retorno = new String();
